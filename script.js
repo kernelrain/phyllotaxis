@@ -18,7 +18,7 @@ window.onload = function() {
 function generate() {
     context.fillStyle = "black";
     context.fillRect(0, 0, canvas.width, canvas.height);
-    phi0 = parseFloat(document.getElementById("angle").value) / 180.0 * Math.PI;
+    phi0 = eval(document.getElementById("angle").value.replace("pi", Math.PI)) / 180.0 * Math.PI;
     drawPoint(0);
 }
 
